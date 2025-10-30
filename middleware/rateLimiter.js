@@ -1,5 +1,5 @@
 // const rateLimit = require("express-rate-limit");
-const rateLimit = require("express-rate-limiter");
+const rateLimit = require("express-rate-limit");
 
 const apiLimiter = rateLimit({
   windowMS: 15 * 60 * 1000,

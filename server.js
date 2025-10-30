@@ -23,7 +23,7 @@ const app = express();
 
 if (process.env.NODE_ENV === "production") {
   const helmet = require("helmet");
-  const rateLimit = require("express-rate-limiter");
+  const rateLimit = require("express-rate-limit");
   // const rateLimit = require("express-rate-limit");
 
   const rateLimiter = rateLimit({
