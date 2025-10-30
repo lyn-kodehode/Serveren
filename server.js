@@ -131,8 +131,8 @@ process.on(`SIGINT`, () => {
   }
 });
 
-// install npm install pm2
+// install npm install -g pm2
 // start server.js -- --name=serveren
-// pm2 stop serveren
+// pm2 stop server
 // npm install --save-dev jest supertest (this has been deprecated)
 // npm uninstall jest supertest
