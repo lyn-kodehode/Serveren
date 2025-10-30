@@ -23,7 +23,8 @@ const app = express();
 
 if (process.env.NODE_ENV === "production") {
   const helmet = require("helmet");
-  const rateLimit = require("express-rate-limit");
+  const rateLimit = require("express-rate-limiter");
+  // const rateLimit = require("express-rate-limit");
 
   const rateLimiter = rateLimit({
     windowMS: 15 * 60 * 1000,
@@ -50,7 +51,7 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false })); //HTML formData
 // app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
-app.use("/", rateLimiter);
+// app.use("/", rateLimiter);
 
 app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/register"));
@@ -129,3 +130,9 @@ process.on(`SIGINT`, () => {
     process.exit(0);
   }
 });
+
+// install npm install pm2
+// start server.js -- --name=serveren
+// pm2 stop serveren
+// npm install --save-dev jest supertest (this has been deprecated)
+// npm uninstall jest supertest
