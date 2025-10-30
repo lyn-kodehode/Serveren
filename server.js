@@ -22,14 +22,14 @@ const db = require("./database");
 const app = express();
 
 if (process.env.NODE_ENV === "production") {
-  const helmet = require("helmet");
-  const rateLimit = require("express-rate-limit");
+  // const helmet = require("helmet");
   // const rateLimit = require("express-rate-limit");
+  // // const rateLimit = require("express-rate-limit");
 
-  const rateLimiter = rateLimit({
-    windowMS: 15 * 60 * 1000,
-    max: 100,
-  });
+  // const rateLimiter = rateLimit({
+  //   windowMS: 15 * 60 * 1000,
+  //   max: 100,
+  // });
 
   app.use(helmet());
   app.use(rateLimiter);
