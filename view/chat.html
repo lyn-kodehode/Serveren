@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/chat.css" />
+    <title>Chat Service</title>
+  </head>
+  <body>
+    <h1>Live Chat</h1>
+
+    <input type="text" id="msgInput" placeholder="Write your message..." />
+    <button id="sendButton" onclick="sendMessage()">Send</button>
+    <button id="notificationButton" onclick="sendNotification()">
+      Send Notification
+    </button>
+
+    <ul id="messages"></ul>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/JS/chat.js"></script>
+  </body>
+</html>
